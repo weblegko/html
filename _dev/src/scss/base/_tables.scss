@@ -1,0 +1,66 @@
+table:not([class]) {
+    background-color: transparent;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: $paragraph-margin;
+
+    @include media('ie') {
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        background-clip: padding-box;
+        border: 1px solid transparent;
+        vertical-align: top;
+        padding: rem(16px);
+
+        &:first-child {
+            border-left: 0;
+        }
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    thead {
+        th,
+        td {
+            font-weight: 700;
+            background-color: $color-2;
+            color: $color-text;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                th,
+                td {
+                    background-color: $gray-light;
+                }
+            }
+
+            &:nth-child(even) {
+                th,
+                td {
+                    background-color: #E6E6E6;
+                }
+            }
+        }
+    }
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: $paragraph-margin;
+
+    >table {
+        margin-bottom: 0;
+    }
+}

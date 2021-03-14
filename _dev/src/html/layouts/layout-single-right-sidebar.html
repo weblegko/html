@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+{% include 'partials/head.html' %}
+
+<body>
+
+    <div class="root">
+
+        {% include 'partials/header.html' %}
+
+        <div class="site-main">
+            
+            {% include 'partials/bread-crumbs.html' %}
+            
+            <div class="container layout-right-sidebar">
+                <div class="row">
+
+                    <div class="col-md-8 col-lg-9 page-content-wrap">
+                        {% block content %}{% endblock %}
+                    </div>
+
+                    <div class="col-md-4 col-lg-3">
+                        {% include 'partials/sidebar.html' %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        {% include 'partials/footer.html' %}
+
+    </div>
+
+    {% include 'partials/modal.html' %}
+
+    {% include 'partials/javascripts.html' %}
+    
+</body>
+
+</html>

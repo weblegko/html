@@ -1,0 +1,99 @@
+.site-header {
+  //margin-bottom: 32px;
+  @include media ('>=lg') {
+    //padding-top: 16px;
+  }
+  
+}
+
+.header-top {
+  display: none;
+
+  @include media ('>=lg') {
+    display: block;
+    height: 82px;
+    padding: 16px 0;
+    background-color: #fff;
+  }
+}
+
+
+.header-top-inner {
+  display: flex;
+  align-items: center;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__img {
+    display: none;
+    @include media ('>=lg') {
+      width: 50px;
+      display: block;
+    }
+  }
+
+  &__img-mini {
+    @include media ('>=lg') {
+      display: none;
+    }
+  }
+
+  &__text {
+    display: none;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    margin-left: 16px;
+    line-height: 1;
+    
+    
+    @include media ('>=lg') {
+      display: block;
+    }
+  }
+}
+
+
+
+a.h-phone {
+  color: #000;
+  text-decoration: none;
+}
+.h-phone {
+  display: flex;
+  align-items: center;
+  margin-left: 64px;
+  font-weight: 600;
+  transition: all 0.3s;
+    
+  i.icon-phone {
+      margin-right: 16px;
+      font-size: 24px;
+      color: $gray;
+      transition: all 0.3s;
+  }
+  
+  &__info {
+    span {
+      display: block;
+      line-height: 1;
+      color: $gray;
+      font-size: 12px;
+      text-align: right;
+    }
+  }
+
+  &:hover {
+    color: $color-1;
+    i.icon-phone {
+      color: $color-1;
+    }
+  }
+
+}
+

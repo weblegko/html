@@ -1,0 +1,65 @@
+// стили блоков одной записи или текстовой страницы
+
+.page-header {
+    position: relative;
+    border-bottom: 1px solid $gray-light;
+    padding: 16px 0px;
+    background: #fff;
+
+    @include media ('>=md') {
+        padding: 40px 0px;
+    }
+
+    &__title {
+        display: block;
+        padding: 0;
+        text-align: left;
+        font-size: rem(30px);
+        line-height: 1;
+        font-weight: 700;
+        font-family: $font-header;
+        margin: 0 auto;
+        color: $color-text;
+        text-transform: uppercase;
+    
+        @include media ('<=md') {
+            font-size: 1.7em;
+        }
+   
+
+    }
+}
+
+
+.go-back-link {
+    display: inline-block;
+    position: absolute;
+    top: 10px; left: 0;
+    width: 126px;
+    text-align: right;
+    text-decoration: none;
+    color: #000;
+    z-index: 2;
+    font-family: $font-header;
+    font-weight: 700;
+
+    @include media ('<=lg') {
+        display: none;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        right:-5px;
+        transition: right 0.3s;
+    }
+
+    &:hover {
+        color: $color-2;
+        &:before {
+            right: 3px;
+        }
+    }
+}

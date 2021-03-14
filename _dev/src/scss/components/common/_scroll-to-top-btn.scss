@@ -1,0 +1,46 @@
+/* ---------- to top button ---------- */
+
+$totop-button-bg-color: $color-1;
+$totop-button-color: #fff;
+
+a.scrolltotop-btn {
+  position: fixed;
+  z-index: 100;
+  right: 24px;
+  bottom: -70px;
+  width: 52px;
+  height: 52px;  
+  background-color: $totop-button-bg-color;
+  color: $totop-button-color;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: bottom 0.3s;
+  display: none;
+  //border-radius: 4px;
+  
+  @include media('>=md') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+
+  &:before {
+    content: "f";
+    font-family: "icons";
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+}
+
+.scrolltotop-btn:hover {
+  opacity: 1;
+  &:before {
+    margin-top: -5px;
+  }
+}
+
+.scrolltotop-btn.top-btn-show {
+  bottom: 80px;
+}

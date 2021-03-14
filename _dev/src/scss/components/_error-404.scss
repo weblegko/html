@@ -1,0 +1,27 @@
+
+.error-404-wrap {
+    position: absolute;
+    @include overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-404 {
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.5;
+
+    &__404 {
+        font-size: 50px;
+        font-weight: 700;
+
+        @include media ('>=md') {
+            font-size: 100px;
+        }
+    }
+
+    &__text {
+
+    }
+}

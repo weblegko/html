@@ -1,0 +1,15 @@
+{% set page_title = 'Страница одной новость' %}
+
+{% extends "layouts/layout-single-left-sidebar.html" %}
+
+{% block content %}
+
+<div class="page-content">
+
+    {% include 'partials/fish-content-for-single.html' %}
+    
+    {% include 'partials/next-prev.html' %}
+
+</div>
+
+{% endblock %}

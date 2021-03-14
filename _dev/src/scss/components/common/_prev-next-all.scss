@@ -1,0 +1,85 @@
+/*  Навигация между записями  */
+
+.post-navigation {
+	padding-top: 40px;
+    text-align: center;
+    position: relative;
+
+	a {
+        display: flex;
+        align-items: center;
+		line-height: 40px;
+		width: 150px;
+        text-align: center;
+        font-family: $font-header;
+        font-weight: 700;
+        color: $gray;
+        font-size: 0.8rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include media ('>=md') {
+            font-size: 0.8rem;
+        }
+		&:hover {
+			color: $color-1;
+		}
+	}
+    
+
+	.nav-previous {
+        position: absolute;
+        left: 0;
+        a:before {
+            display: inline-block;
+            content:'h';
+            margin-right: 8px;
+            text-transform: lowercase;
+            font-family: 'icons';
+            transform: rotate(180deg);
+        }
+
+		a:hover:before{
+            //animation: shake $duration*2 ease-in;
+		}
+	}
+
+	.nav-next {
+        position: absolute;
+        right: 0;
+        a:after {
+            margin-left: 8px;
+            display: inline-block;
+            content:'h';
+            text-transform: lowercase;
+            font-family: 'icons';
+            
+        }
+        
+		a:hover:after {
+            //animation: shake $duration*2 ease-in;                
+		}
+
+	}
+
+    .all-news-nav {
+        position: relative;
+        width: 150px;
+        margin: 0 auto;
+        text-decoration: none;
+        padding-top: 50px;
+        
+        @include media ('>=480px') {
+            padding: 0;
+        }
+
+        i {
+            display: inline-block;
+            position: relative;
+            bottom: -4px;
+            margin-right: 10px;
+        }
+
+        
+    }
+
+}

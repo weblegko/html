@@ -1,0 +1,28 @@
+.search-form {
+    display: flex;
+
+    &__input {
+        border: 1px $gray-light solid;
+        //border: none;
+        padding: 5px 10px;
+        min-width: 280px;
+        outline: none
+    }
+    
+    &__submit {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        border: none;
+        margin-left: 10px;
+        background-color: #fff;
+        padding: 5px 10px;
+        border: 1px $gray-light solid;
+        color: $color-2;
+        outline: none;
+        &:hover {
+            background-color: $color-1;
+            color: #fff;
+        }
+    }
+}

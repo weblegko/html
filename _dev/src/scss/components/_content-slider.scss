@@ -1,0 +1,60 @@
+// Слайдер slick (в контенте)
+
+.slider-wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.slider {
+      
+
+    &__item {
+        overflow: hidden;
+        outline: none;
+        
+       
+    }
+
+    &__item-thumb {
+        // height: 520px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5f5f5;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+        }
+    }
+
+    .slick-arrow {
+        background-color: $gray-light;
+        border: 1px #d1d1d1 solid;
+        opacity: 0.6;
+        
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        outline: none;
+
+        &:hover {
+            // background-color: #FFCA41;
+            opacity: 1;
+        }
+    }
+    
+    &-prev {
+        left: 16px;
+    }
+    &-next {
+        right: 16px;
+    }
+
+}

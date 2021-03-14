@@ -1,0 +1,132 @@
+
+// @use "@material/button";
+// @include button.core-styles;
+
+//@import "@material/button/mdc-button";
+
+
+.none-outline {
+    outline: none !important;    
+ 
+}
+
+.my-btn {
+    outline: none !important;
+}
+
+
+
+/*----- Крута кнопка с линиями которые разъезжаются ---------*/
+.btn-wrp {
+    text-align: center;
+  }
+  
+  
+  /* зеленая кнопка с анимацией рамкой */
+  .btn-rect {
+    display: inline-block;
+    position: relative;
+    font-family: $font-header;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1em;
+    line-height: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: middle;
+  
+    .line {
+      position: absolute;
+      background: $color-2;
+    }
+  
+    .top-line {
+      height: 2px;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: right 0.25s;
+    }
+  
+    .top-additional-line {
+      height: 2px;
+      top: 0;
+      right: 0;
+      width: 0;
+      transition: width 0.25s;
+    }
+  
+    .bottom-additional-line {
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      transition: width 0.25s;
+    }
+  
+    .bottom-line {
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: left 0.25s;
+    }
+  
+    .left-line {
+      width: 2px;
+      height: 0;
+      left: 0;
+      top: 0;
+      transition: height 0.25s;
+    }
+  
+    .right-line {
+      width: 2px;
+      bottom: 0;
+      right: 0;
+      height: 0;
+      transition: height 0.25s;
+    }
+  
+  
+    &:hover {
+      color: $color-2;
+      .top-line {
+          right: 50px;
+      }
+      .bottom-line {
+          left: 50px;
+      }
+      .left-line,
+      .right-line {
+          height: 100%;
+      }
+    }
+  
+  
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 13px;
+    }
+  
+  
+    &--white {
+      color: #fff;
+      font-size: 1em;
+      margin: 0 15px;
+      .line {
+        background: #fff;
+        opacity: 0.3;
+      }
+      &:hover {
+        color: #dfdfdf;
+        .line {
+          opacity: 1;
+        }
+      }
+    }
+  }

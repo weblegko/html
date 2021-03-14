@@ -1,0 +1,33 @@
+.m-header {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid $gray-light;
+
+    @include media ('>=md') {
+        display: none;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    &__logo {
+        display: block;
+        position: relative;
+    
+        img {
+            width: 30px;
+            height: auto;
+        }
+    }
+    
+        
+}
+
+
+
+

@@ -1,0 +1,85 @@
+//------------ фиксированные бекграунды ---------- 
+.fixed-bg {
+	min-height: 100%;
+	background-size: auto 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-position: center center;
+    
+    @include media ('>=md') {
+        background-size: cover;
+    }
+}
+
+.fixed-bg.bg-1 {
+  background-image: url("../img/ibiza/ibiza.jpg");
+}
+
+
+
+
+.sc--bg-fixed {
+	padding: 0;
+	min-height: 659px;
+
+	.sc__title {
+		color: #fff;
+	}
+	.sc__content {
+		font-size: 1.1em;
+		line-height: 1.7;
+		color: #fff;
+	}
+
+	.btn-wrp {
+		padding-top: 57px;
+		text-align: left;
+
+		@media (--to-tablet) {
+			text-align: center;
+		}
+	}
+}
+
+.right-block {
+	position: relative;
+	width: 100%;	
+	min-height: 659px;	
+	background-color: rgba(0,0,0, 0.8);
+	left: 0;
+	padding: 20px;
+	
+	
+
+	@include media ('>=md') {
+		
+		width: 5000px;
+		padding: 115px;
+		padding-top: 80px;
+		left: 35%;
+	}
+	
+
+	@include media ('>=lg') {
+		padding: 115px;
+		padding-top: 80px;
+		left: 50%;
+	}
+
+	
+
+	.content-wrp {
+		
+		width: 100%;
+		
+		@include media ('>=md') {
+			width: 400px;						
+		}
+		
+		@include media ('>=xl') {
+			width: 500px;
+		}
+		
+
+	}
+}

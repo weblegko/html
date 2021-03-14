@@ -1,0 +1,66 @@
+// Каруселька slick
+
+.carousel-wrap {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.carousel {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &__item {
+        padding: 0 10px;
+        outline: none;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+        }
+    }
+    
+
+    .slick-arrow {
+        background-color: $gray-light;
+        border: 1px #d1d1d1 solid;
+        opacity: 0.6;
+        border: none;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        outline: none;
+
+        &:hover {
+            //background-color: #FFCA41;
+            opacity: 1;
+        }
+    }
+
+    .carousel__item:hover {
+        .carousel__item-img {
+            transform: scale(1.05);
+        }
+
+        .carousel__item-title {
+            background-color: transparent;
+            color: #000;
+            text-shadow: 0 0 5px #fff;
+        }
+        
+    }
+
+    &-prev {
+        left: 26px;
+    }
+    &-next {
+        right: 26px;
+    }
+
+}

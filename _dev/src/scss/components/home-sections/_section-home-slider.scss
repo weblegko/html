@@ -1,0 +1,47 @@
+// Слайдер slick (в коненте)
+
+.home-slider-wrap {
+    width: 100%;
+    position: relative;   
+}
+
+.home-slider {
+      
+    &__item {
+        overflow: hidden;
+        outline: none;
+        max-height: 650px;
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .slick-arrow {
+        background-color: #F3DB9B;
+        border: none;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        outline: none;
+        line-height: 1;
+        
+        &:hover {
+            background-color: #FFCA41;
+        }
+    }
+    
+    &-prev {
+        left: 16px;
+    }
+    &-next {
+        right: 16px;
+    }
+
+}

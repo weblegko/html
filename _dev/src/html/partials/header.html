@@ -1,0 +1,123 @@
+<header id="header" class="site-header">
+
+
+
+
+    <div class="drawer-scrim js-close-drawer"></div>
+    <div class="drawer">
+        <button class="drawer-close-btn js-close-drawer" type="button"><span class="drawer-close-btn-inner"><i
+                    class="icon-close"></i></span></button>
+        <div class="drawer-inner">
+
+            <a class="drawer-login-btn" href="/my-account" title="Log in to your customer account" rel="nofollow">
+                <i class="icon-user-outline login-btn"></i>
+            </a>
+            <ul class="drawer-menu js-menu js-drawer-menu-list"></ul>
+        </div>
+    </div>
+
+
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-inner">
+                <span class="logo">
+                    <img class="logo__img" src="/img/logo.svg" alt="logo">
+                    <img class="logo__img-mini" src="/img/logo.svg" alt="logo">
+                    <span class="logo__text">Магазин <br />якорей</span>
+                </span>
+                <a href="tel:88003010985" class="h-phone">
+                    <i class="icon-phone"></i>
+                    <span class="h-phone__info">
+                        8-800-000-00-00
+                        <span>Звонок бесплатный</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nb-inner">
+
+                <div class="nb-left-wrap">
+
+                    <img class="nb-logo" src="/img/logo.svg" alt="logo">
+
+                    <div class="nb-menu">
+
+
+                        {% include 'partials/main-menu.html' %}
+
+
+                    </div>
+
+                </div>
+
+                <div class="nb-right-wrap">
+
+
+                    <a href="tel:88003010985" class="nb-phone">
+                        <i class="icon-phone"></i>
+                    </a>
+
+
+
+                    <div class="nb-search">
+                        <button type="button" class="nb-search__btn js-togle-search-box">
+                            <i></i>
+                        </button>
+                        <div class="nb-search__box">
+                            <div id="search_widget" class="search-widget">
+                                <form method="get" action="#">
+                                    <input type="hidden" name="controller" value="search">
+                                    <input type="text" name="s" value="" placeholder="Поиск в каталоге"
+                                        aria-label="Поиск">
+                                    <button type="submit">
+                                        <i class="icon-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nb-login-cart-wrap">
+                        <div class="h-login">
+                            <div class="user-info">
+                                <a href="#" title="Войти в учетную запись" rel="nofollow">
+                                    <i class="icon-user-outline login-btn"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="h-cart">
+                            
+                            <!-- empty cart -->
+                            <!-- <div class="h-cart__inner">
+                                <i class="h-cart__icon icon-shopping-cart"></i>
+                            </div> -->
+                            
+                            <div class="h-cart__inner blockcart cart-preview active">
+                                <a rel="nofollow" href="#">
+                                    <i class="h-cart__icon icon-shopping-cart"></i>
+                                    <span class="h-cart__count cart-products-count">1</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="nb-hamburger">
+                        <button class="hamburger js-open-drawer" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>

@@ -1,0 +1,62 @@
+
+.sc {
+    padding: 64px 0;
+    
+
+    &__title {
+        position: relative;
+        margin-bottom: 48px;
+        padding: 0;
+        color: #1b1c19;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.7rem;
+        font-family: $font-header;
+        line-height: 1.2;
+
+        @include media ('>=md') {
+            margin-bottom: 64px;
+            text-align: left;
+            font-size: 2.2rem;
+        }
+
+
+        &::after {
+            content: '';
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 72px;
+            height: 2px;
+            top: 24px;
+            background-color: $color-1;
+
+            @include media ('>=md') {
+                margin: 0;
+            }
+            
+        }
+
+
+        &--white {
+            color: #fff;
+       
+        }
+
+        
+    }
+}
+
+
+
+@import "./section-home-slider";
+@import "./section-img-text";
+@import "./section-parallax";
+@import "./section-contacts";
+@import "./section-yandex-map";
+@import "./section-text";
+@import "./section-bg-fixed";
+@import "./section-news";
+@import "./section-form-feedback";
+@import "./section-post-carousel";
+

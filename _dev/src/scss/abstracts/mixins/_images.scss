@@ -1,0 +1,36 @@
+@mixin img-cover() {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+}
+
+@mixin img-lazy() {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        background-color: $gray-light;
+        display: block;
+        width: 100%;
+        padding-top: 62.5%;
+    }
+
+    img {
+        @include img-cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.lazyload,
+        &.lazyloading {
+            opacity: 0;
+            transition: opacity $duration;
+        }
+
+        &.lazyloaded {
+            opacity: 1;
+        }
+    }
+}

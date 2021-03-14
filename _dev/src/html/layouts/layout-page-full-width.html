@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+{% include 'partials/head.html' %}
+
+<body>
+
+    <div class="root">
+
+        {% include 'partials/header.html' %}
+
+        <div class="site-main">
+            
+            {% include 'partials/page-header.html' %}
+            
+            {% include 'partials/bread-crumbs.html' %}
+            
+            <div class="container">
+
+                <div class="page-content-wrap">
+
+                    {% block content %}{% endblock %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% include 'partials/footer.html' %}
+
+    </div>
+
+    {% include 'partials/modal.html' %}
+    {% include 'partials/javascripts.html' %}
+
+</body>
+</html>

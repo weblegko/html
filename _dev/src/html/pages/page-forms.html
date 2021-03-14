@@ -1,0 +1,77 @@
+{% set page_title = 'Страница с формой' %}
+
+{% extends "layouts/layout-page.html" %}
+
+{% block content %}
+<div class="page-content">
+    <div class="content">
+
+    
+        <form class="form" action="">
+            <div class="row">
+                <div class="col">
+                    <label class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+                        <span class="mdc-floating-label" id="my-label-id">Hint text</span>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id2">
+                        <span class="mdc-floating-label" id="my-label-id2">Hint text</span>
+                        <span class="mdc-line-ripple"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea">
+                        <textarea class="mdc-text-field__input" aria-labelledby="my-label-id4" rows="8"
+                          cols="40" maxlength="140"></textarea>
+                        <span class="mdc-notched-outline">
+                          <span class="mdc-notched-outline__leading"></span>
+                          <span class="mdc-notched-outline__notch">
+                            <span class="mdc-floating-label" id="my-label-id4">Your Name</span>
+                          </span>
+                          <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                    </label>
+                    <div class="mdc-text-field-helper-line">
+                        <div class="mdc-text-field-character-counter">0 / 140</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <button class="mdc-button mdc-button--outlined none-outline">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Отмена</span>
+                    </button>
+
+                    <button class="mdc-button mdc-button--raised none-outline">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">Отправить</span>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+       
+    </div>
+        
+</div>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+
+.bread-crumbs-wrap {
+    padding: 8px 0;
+    border-bottom: 1px solid $gray-light;
+
+    @include media ('>=md') {
+        padding: 15px 0;
+    }
+}
+
+.bread-crumbs {
+    @include list-unstyled;
+    margin: 0;    
+    li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        
+
+        &:not(:last-child):after {
+            content:'e';
+            font-family: 'icons';
+            text-transform: lowercase;
+            margin: 0 15px;
+            text-decoration: none !important;
+            color: $gray;
+            position: relative;top: 2px;
+        }
+
+        a {
+            color: $gray-dark;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            line-height: 1;    
+            
+            &:hover {
+                text-decoration: none;
+                color: $color-2;
+            }
+            
+           
+        }
+
+        span {
+            font-size: 0.8rem;
+            color: $gray;
+            line-height: 1;
+        }
+    }
+}

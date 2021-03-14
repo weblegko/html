@@ -1,0 +1,86 @@
+$duration: .15s;
+
+// цветовая палитра
+$white: #fff;
+
+$gray: #7D7D7D;
+$gray-medium: #dadada;
+$gray-light: #e9e9e9;
+$gray-dark: #555;
+
+$yellow: #fab702;
+$yellow-light: #F3DB9B;
+$yellow-dark: #d37f02;
+
+$orange: #FD6434;
+
+
+
+
+$cherry: #b10c3c;
+$cherry-light: #CE6968;
+$cherry-dark: #9F4241;
+
+
+
+// цветоваая схема
+$color-1: $yellow;
+$color-2: $yellow-dark;
+$color-3: $yellow-light;
+
+$color-bg: #fff;
+$color-text: #333; // цвет текста
+$color-header: #333;
+$color-link: $color-1;
+
+
+
+// Стек шрифтов для текста
+$font-text: 'PT Sans', sans-serif !default;
+
+// Стек шрифтов для заголовков
+$font-header: 'Open Sans', sans-serif !default;
+
+
+// bootstrap
+$body-bg: $color-bg;
+$body-color: $color-text;
+
+$font-family-base: sans-serif;
+$font-size-base: 1rem;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+
+$enable-shadows: false;
+
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-color: inherit;
+$link-hover-decoration: none;
+
+$paragraph-margin: 2rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1130px
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+// include-media
+$breakpoints: map-remove($grid-breakpoints, xs);
+
+$media-expressions: (
+  'ie': 'screen and (-ms-high-contrast: active), (-ms-high-contrast: none)'
+);

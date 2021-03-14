@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "jquery"
+  ],
+  "rules": {
+    "no-unused-vars": "warn"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jquery": true,
+    "commonjs": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:jquery/slim"
+  ]
+}

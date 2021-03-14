@@ -1,0 +1,61 @@
+.sc--post-carousel {
+    padding: 64px 0;
+    
+    @include media ('>=lg') {
+        padding: 96px 0;
+    }
+}
+
+
+.post-carousel-wrap {
+    padding-top: 32px;
+    overflow: hidden;
+    
+    @include media ('>=sm') {
+        overflow: visible;
+    }
+}
+
+.post-carousel {
+    margin-left: -15px;
+    margin-right: -180px;
+    position: relative;
+
+    @include media ('>=sm') {
+        margin-right: -15px;
+    }
+        
+    &__item {
+        padding: 0 15px;
+    }
+
+    .slick-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -64px;
+        height: 36px;
+        width: 36px;
+        outline: none;
+        background-color: transparent;
+        color: $gray-light;
+        border: 2px solid $gray-light;
+        font-size: 24px;
+        line-height: 1;        
+
+        &:hover {
+            color: $gray;
+            border: 2px solid $gray;
+        }
+    }
+
+    .slider-prev {
+        left: auto;
+        right: 58px;
+    }
+
+    .slider-next {
+        right: 15px;
+    }
+}

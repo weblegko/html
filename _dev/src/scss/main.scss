@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import "./base/fonts";
+
+@import "./abstracts/functions";
+@import 'include-media/dist/include-media';
+@import "./abstracts/variables";
+@import "bootstrap/scss/mixins";
+@import "./abstracts/mixins";
+
+@import "./base/base"; 
+@import "./base/typography";
+@import "./base/tables";
+@import "./base/animations";
+@import "./base/video";
+@import "./base/print";
+
+@import "./components/common/forms";
+@import "./components/common/buttons";
+@import "./components/common/scroll-to-top-btn";
+@import "./components/common/search-form";
+@import "./components/common/bread-crumbs";
+@import "./components/common/socio";
+@import "./components/common/pagination";
+@import "./components/common/prev-next-all";
+
+@import "./components/content-carousel";
+@import "./components/content-slider";
+@import "./components/card";
+@import "./components/page-header";
+@import "./components/page-content";
+@import "./components/error-404";
+@import "./components/home-sections/section";
+@import "./components/widgets/widget";
+@import "./components/widgets/widget-tag-cloud";
+
+@import "./layout/core";
+@import "./layout/header";
+@import "./layout/drawer";
+@import "./layout/nav-bar";
+@import "./layout/header-mobile";
+@import "./layout/mobile-menu";
+@import "./layout/sf-menu";
+@import "./layout/sidebar";
+@import "./layout/footer";
+
+//@import "./pages/home";

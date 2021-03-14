@@ -1,0 +1,87 @@
+/*--------------- Секция контакты ------------*/
+.sc--contacts {
+	background-color: #f1f1f1;
+    padding-bottom: 32px;
+    
+    @include media ('>=lg') {
+        padding-top: 124px;
+        padding-bottom: 96px;
+    }
+}
+
+.contacts__item {
+    
+    margin-bottom: 32px;
+    
+    @include media ('>=lg') {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+    
+    }
+    
+}
+
+
+.contacts__item-inner {
+    display: flex;
+    
+
+}
+
+.contacts__item-icon {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    
+
+    i {
+        color: $color-2;
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+        
+    }
+
+    i.icon-map {
+        top: -4px;
+        font-size: 33px;
+    }
+
+    i.icon-envelope {
+        top: -4px;
+        font-size: 32px;
+    }
+
+    i.icon-mobile {
+        top: 0px;
+        font-size: 28px;
+    }
+
+    i.icon-share {
+        top: -2px;
+        
+    }
+}
+
+.contacts__item-info {
+    span {        
+            display: block;
+            margin-bottom: 5px;
+            color: #000;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: $font-header;
+            line-height: 1;        
+    }
+
+    a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration-line: underline;
+        color: #707070;
+    }
+}
+

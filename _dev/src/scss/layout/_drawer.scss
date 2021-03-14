@@ -1,0 +1,241 @@
+.drawer-scrim {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    width: 320px;
+    right: -320px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 2000;
+    transition: transform 0.3s;
+    overflow: hidden;
+    
+
+    @include media ('>=sm') {
+        width: 484px;
+        right: -484px;
+    }
+
+    @include media ('>=md') {
+        width: 639px;
+        right: -639px;
+    }
+
+    @include media ('>=1200px') {
+        width: 1144px;
+        right: -1144px;
+    }
+}
+
+.drawer.opened {
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+    transform: translateX(-320px);
+    
+    @include media ('>=sm') {
+        transform: translateX(-484px);
+    }
+
+    @include media ('>=md') {
+        transform: translateX(-639px);
+    }
+
+    @include media ('>=1200px') {
+        transform: translateX(-1144px);
+    }
+}
+
+.drawer-inner {
+    padding: 88px 24px 32px 24px;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+   
+}
+
+.drawer-logo {
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    
+    width: 40px;
+    height: auto;
+    
+}
+
+.drawer-login-btn {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    text-decoration: none;
+    color: $gray;
+    i {
+        font-size: 32px;
+    }
+}
+
+
+
+.drawer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .sub-menu {
+        margin-top: 16px;
+        padding-left: 32px;
+    }
+
+    
+    li {
+        padding: 8px 0;
+        position: relative;
+
+        a {
+            display: block;
+            color: $gray-dark;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            
+            line-height: 100%;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            position: relative;
+            
+            
+            &:hover,
+            &:active {
+                color:  $color-1;
+                
+                &:before {
+                    left: -35px
+                }
+
+               
+            }
+        }
+
+        .open-submenu-btn {
+            position: absolute;
+            right: 0;
+            top: 12px;
+            width: 24px; height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            border: 1px solid $gray-light;
+            background: #fff;
+            outline: none;
+
+            &::before {
+                content: "c";
+                font-family: 'icons';
+                transition: all 0.3s;
+            }
+
+        }
+
+        .open-submenu-btn.sub-menu-opened {
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+
+    > li {
+        border-top: 1px solid $gray-medium;
+        padding: 16px 0;
+        
+        > a {
+            font-size: 18px;
+        }
+    }
+    
+}
+
+
+.drawer-signin {
+    margin-bottom: 32px;
+    border-top: 1px solid $gray-medium;
+    padding-top: 12px;
+
+    a {
+        color: $gray;
+        text-decoration: none;
+        font-weight: 600;
+        
+        &:active {
+            color: $color-1;
+        }
+    }
+
+    i {
+        font-size: 32px;
+        margin-right: 16px;
+    }   
+}
+
+.drawer-search {
+    margin-bottom: 16px;
+    .search-widget {
+        width: 100%;
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.drawer-close-btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    outline: none !important;
+    z-index: 100;
+}
+
+.drawer-close-btn-inner {
+    width: 40px;
+    height: 40px;
+    //background-color: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    color: #000;
+
+    i {
+        line-height: 0;
+        padding: 0;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+        font-size: 21px;
+    }
+}
+
+.drawer-close-btn:hover i {
+    transform: rotate(90deg);
+}

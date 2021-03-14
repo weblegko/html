@@ -1,0 +1,213 @@
+/* Один эллемент в ленте записей (сетка) */
+
+// дефолтный вариант
+.card {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 64px;
+
+    &__thumb {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 20px;
+        max-width: 370px;
+        border-radius: 4px;
+        //width: 100%;
+        
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s;
+            line-height: 0;
+        }
+    }
+
+    &__info {
+        overflow: hidden;
+        line-height: 1.5;
+    }
+
+    
+    &__title {
+        display: block;
+        margin: 0;
+        color: $color-header;
+        font-weight: bold;
+        font-size: 1.1em;
+        line-height: 1.5;
+        font-family: $font-header;
+        
+        a {
+            color: $color-header;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $color-2 ;
+        }
+    }
+
+    &__date {
+      display: block;
+      font-weight: 700;
+      font-size: 1em;
+      color: #676767;
+   }
+
+   &__excerpt {
+     margin-bottom: 1.5rem;
+      p {
+        margin-bottom: 0.8rem;
+      }
+   }
+   
+   .more-link {
+     color: $color-1;
+     font-weight: 700;
+     font-size: 0.8rem;
+     text-transform: uppercase;
+     display: flex;
+     align-items: center;
+     margin-top: 1.5rem;
+
+     &::after {
+       content: 'h';
+       font-family: 'icons';
+       text-transform: lowercase;
+       margin-left: 8px;
+     }
+
+     &:hover:after {       
+        animation: shake $duration*2 ease-in;
+     }
+   }
+
+}
+
+
+// второй вариант - большой
+.card--v2 {
+  max-width: 800px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $gray-light;
+
+  .card__thumb {
+      margin-bottom: 24px;
+      max-width: 800px;
+      border-radius: 4px;
+  }
+
+  .card__info {
+      line-height: 1.5;
+  }
+
+  .card__title {
+    color: $gray;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 16px;
+  }
+
+  .card__date {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: $gray;
+    margin-bottom: 16px;
+  }
+
+}
+
+
+// ховер-эффекта миниатюрки 
+
+.overlay-icon-arrow {
+    .image-overlay-inside:before {
+        content: 'A';
+    }
+}
+
+.overlay-icon-zoom {
+    .image-overlay-inside:before {
+        content: 'A';
+    }
+}
+
+.hover-fint {
+
+  a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-overlay {
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    top:0; left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  a:hover img {
+    transform: scale(1.05);
+  }
+
+   a:hover .image-overlay {
+    opacity: 0.8;
+  }
+
+  a .image-overlay {
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .image-overlay-inside {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .image-overlay-inside:before {
+    font-family: 'icons';
+    font-size: 32px;
+    font-weight: normal;
+
+    position: absolute;
+    border-radius: 50px;
+    background-color: $color-2;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    left: 50%;
+    top: 50%;
+    margin: -35px 0 0 -35px;
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+  }
+
+  a:hover .image-overlay-inside{
+    -webkit-animation: fint 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275); /* Safari 4+ */
+    animation:         fint 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275); /* IE 10+ */
+  }
+
+}
+
+/* Анимашка для ховера миниатюрки */
+@-webkit-keyframes fint {
+  0%   { -webkit-transform:rotate(-175deg) scale(0.2);  }
+  100% { -webkit-transform:rotate(0deg) scale(1);  }
+}
+@keyframes fint {
+  0%   { transform:rotate(-175deg) scale(0.2);  }
+  100% { transform:rotate(0deg) scale(1);   }
+}

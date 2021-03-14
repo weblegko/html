@@ -1,0 +1,7 @@
+.sc--news {
+    padding: 64px 0;
+
+    @include media ('>=lg') {
+        padding: 128px 0;
+    }
+}

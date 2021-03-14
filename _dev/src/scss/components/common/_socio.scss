@@ -1,0 +1,35 @@
+.socio-list {
+    @include list-unstyled;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+    li {
+        margin-right: 12px;
+
+        a {
+            color: #fff;
+            text-decoration: none !important;
+            display: block;
+            font-size: 24px;
+            @include transition;
+
+            span {
+                display: block;
+                line-height: 0;
+            }
+
+            &:hover {
+
+                span {
+                    color: $yellow-dark;
+                    transform: scale(1.1);
+                }
+                
+            }
+        }
+    }
+}
+
+

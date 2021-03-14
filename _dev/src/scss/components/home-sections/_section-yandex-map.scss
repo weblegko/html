@@ -1,0 +1,9 @@
+.sc--yandex-map  {
+    padding: 0;
+    position: relative;
+    height: 500px;
+}
+
+.yandex-map-canvas {
+    @include overlay;
+}

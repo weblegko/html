@@ -1,0 +1,51 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "Gulp 4 front-end starter template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Dmitry Bednyuk <weblegko@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v8.0.1",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulplog": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "sort-css-media-queries": "^1.5.2",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^5.3.2",
+    "webpack-stream": "^6.1.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "bootstrap": "^4.5.3",
+    "include-media": "^1.4.9",
+    "jquery": "^3.5.1",
+    "lazysizes": "^5.2.2",
+    "slick-carousel": "^1.8.1",
+    "superfish": "^1.7.10",
+    "ymaps": "^0.2.1",
+    "csshake": "^1.5.3"
+  }
+}

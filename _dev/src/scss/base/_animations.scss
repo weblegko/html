@@ -1,0 +1,132 @@
+// Анимация для полей форм
+@keyframes onAutoFillStart {
+    from {}
+
+    to {}
+}
+
+@keyframes onAutoFillCancel {
+    from {}
+
+    to {}
+}
+
+
+// Анимация для кнопок пагинации
+@keyframes shake {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+
+    50% {
+        -webkit-transform: translate3d(-2px, 0, 0);
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    20%,
+    80% {
+        -webkit-transform: translate3d(2px, 0, 0);
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+// Анимация для intro-стрелки
+@keyframes arrow-in {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+}
+
+@keyframes arrow-out {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+
+    90% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 100%);
+    }
+}
+
+// Анимация для dropdown-элементов
+@keyframes slide-in-down {
+    from {
+        top: -100%;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes slide-in-up {
+    from {
+        top: 100%;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes slide-out-down {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 100%;
+    }
+}
+
+@keyframes slide-out-up {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -100%;
+    }
+}
+
+
+
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+/* Анимация - эффект бесконечного вращения */
+.spin {
+    animation-name: spin;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 100;
+}

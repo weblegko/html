@@ -1,0 +1,28 @@
+// Videos
+video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    width: 100%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    iframe {
+        border: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
