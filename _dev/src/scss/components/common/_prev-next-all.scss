@@ -31,15 +31,15 @@
         left: 0;
         a:before {
             display: inline-block;
-            content:'h';
+            content:'N';
             margin-right: 8px;
-            text-transform: lowercase;
+            text-transform: uppercase;
             font-family: 'icons';
-            transform: rotate(180deg);
+            //transform: rotate(180deg);
         }
 
 		a:hover:before{
-            //animation: shake $duration*2 ease-in;
+            animation: shake $duration*2 ease-in;
 		}
 	}
 
@@ -49,14 +49,14 @@
         a:after {
             margin-left: 8px;
             display: inline-block;
-            content:'h';
-            text-transform: lowercase;
+            content:'O';
+            text-transform: uppercase;
             font-family: 'icons';
             
         }
         
 		a:hover:after {
-            //animation: shake $duration*2 ease-in;                
+            animation: shake $duration*2 ease-in;                
 		}
 
 	}
